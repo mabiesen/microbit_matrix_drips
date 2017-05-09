@@ -1,7 +1,7 @@
 from microbit import *
 import random
 
-class drip():
+class Drip():
   low = 0
   high = 9
   mid_high_one = 3
@@ -26,15 +26,18 @@ class drip():
       display.set_pixel(self.currentx,self.trailone,mid_high_one)
 
   def move_current(self):
-    display.set_pixel(self.currentx,self.currenty,low)
-    self.currenty = self.currenty + 1
-    display.set_pixel(self.currentx,self.currety,high)
+    if self.trailtwo < 4 and self.trailtwo >= 0:
+      display.set_pixel(self.currentx,self.currenty,low)
+      self.currenty = self.currenty + 1
+      display.set_pixel(self.currentx,self.currety,high)
     
   def move_all(self):
     self.move_current()
     self.move_trailone()
     self.move_trailtwo()
     
-
+def main():
+  myobject = Drip()
+  
     
 
