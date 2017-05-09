@@ -19,8 +19,8 @@ class Drip():
       display.set_pixel(self.currentx,self.trailtwo,low)
     if self.trailtwo < 4 and self.trailtwo >= 0:
       display.set_pixel(self.currentx,self.trailone,low)
-      
-    display.set_pixel(self.currentx,self.currenty,low)
+    if self.currenty < 4 and self.currenty >= 0: 
+      display.set_pixel(self.currentx,self.currenty,low)
     
     
   def increase_y_value(self):
