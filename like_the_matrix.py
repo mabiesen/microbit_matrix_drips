@@ -47,9 +47,9 @@ class Drip():
     self.increase_y_value()
     self.light_up_all()
     
-def main():
+while True:
   myobject = Drip()
-  while True:
+  while myobject:
     if myobject.currenty == 6:
       del myobject
     else:
