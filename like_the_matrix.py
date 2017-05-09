@@ -12,6 +12,7 @@ class Drip():
     self.currenty = 0
     self.trailone = currenty - 1
     self.trailtwo = currenty - 2
+    self.light_up_all()
   
   def set_all_low(self):
     display.set_pixel(self.currentx,self.trailtwo,low)
@@ -42,7 +43,9 @@ class Drip():
     self.light_trail_two()
     
   def move_the_drip():
-    
+    self.set_all_low()
+    self.increase_y_value()
+    self.light_up_all()
     
 def main():
   myobject = Drip()
