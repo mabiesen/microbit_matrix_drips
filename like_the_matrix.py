@@ -2,6 +2,8 @@ from microbit import *
 import random
 ####################################################################################
 ####### BEGIN CLASS ################################
+
+
 # When called this class produces an object controls a single "drip" on the screen
 class Drip():
   
