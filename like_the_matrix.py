@@ -49,7 +49,7 @@ class Drip():
     
 def main():
   myobject = Drip()
-  while myobject():
+  while True:
     if myobject.currenty == 6:
       del myobject
     else:
