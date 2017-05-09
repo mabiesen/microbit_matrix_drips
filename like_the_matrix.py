@@ -36,15 +36,11 @@ class Drip():
     if self.currenty < 4 and self.currenty >= 0:
       display.set_pixel(self.currentx,self.currety,high)
     
-  def light_up_all(self):
-    self.light_current()
-    self.light_trail_one()
-    self.light_trail_two()
     
   def move_the_drip():
     self.set_all_low()
     self.increase_y_value()
-    self.light_up_all()
+    self.set_all_high()
     
 while True:
   myobject = Drip()
