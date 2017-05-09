@@ -5,7 +5,7 @@ import random
 # When called this class produces an object controls a single "drip" on the screen
 class Drip():
   
-  def __init__(self,startx,starty):
+  def __init__(self,startx,starty):     # Arguments passed during class call used here. starting y values can be negative
     self.currentx = startx
     self.low = 0
     self.high = 9
