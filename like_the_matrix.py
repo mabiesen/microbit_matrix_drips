@@ -12,7 +12,7 @@ class Drip():
     self.currenty = 0
     self.trailone = currenty - 1
     self.trailtwo = currenty - 2
-    self.light_up_all()
+    self.set_all_high()
   
   def set_all_low(self):
     if self.trailtwo <= 4 and self.trailtwo >= 0:
