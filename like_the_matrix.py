@@ -45,7 +45,7 @@ class Drip():
 while True:
   myobject = Drip()
   while myobject:
-    if myobject.currenty == 6:
+    if myobject.currenty > 7:
       del myobject
     else:
       myobject.move_the_drip()
