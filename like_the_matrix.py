@@ -4,8 +4,8 @@ import random
 class Drip():
   low = 0
   high = 9
-  mid_high_one = 3
-  mid_high_two = 6
+  mid_high_one = 6
+  mid_high_two = 3
   
   def __init__(self):
     self.currentx = random.choice(0,4)
