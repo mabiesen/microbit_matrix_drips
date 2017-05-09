@@ -4,9 +4,10 @@ import random
 ####### BEGIN CLASS ################################
 
 
-# When called this class produces an object controls a single "drip" on the screen
+# When called this class produces an object that represents a single "drip" on the screen
 class Drip():
   
+  # the __init__ function is a python built in function that is immediately called when an object is created
   def __init__(self,startx,starty):     # Arguments passed during class call used here. starting y values can be negative
     self.currentx = startx
     self.low = 0
