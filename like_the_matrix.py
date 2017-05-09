@@ -3,8 +3,7 @@ import random
 
 class Drip():
   
-  def __init__(self):
-    startx = random.randint(0,4)
+  def __init__(self,startx):
     self.currentx = startx
     self.low = 0
     self.high = 9
@@ -44,7 +43,8 @@ class Drip():
     self.set_all_high()
     
 while True:
-  myobject = Drip()
+  startx = random.randint(0,4)
+  myobject = Drip(startx)
   while myobject:
     if myobject.currenty > 7:
       del myobject
