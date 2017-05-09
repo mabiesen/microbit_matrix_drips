@@ -50,7 +50,11 @@ class Drip():
 def main():
   myobject = Drip()
   while myobject():
-    if myobject.currenty == 
+    if myobject.currenty == 6:
+      del myobject
+    else:
+      myobject.move_the_drip()
+    sleep(200)
     
   
     
