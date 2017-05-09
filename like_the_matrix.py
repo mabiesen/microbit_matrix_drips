@@ -2,25 +2,34 @@ from microbit import *
 import random
 
 class Drip():
-  low = 0
-  high = 9
-  mid_high_one = 6
-  mid_high_two = 3
   
   def __init__(self):
-    self.currentx = random.choice(0,4)
+    startx = random.randint(0,4)
+    self.currentx = startx
+    self.low = 0
+    self.high = 9
+    self.mid_high_one = 6
+    self.mid_high_two = 3
     self.currenty = 0
     self.trailone = -1
     self.trailtwo = -2
     self.set_all_high()
+    
+  def set_all_high(self):
+    if self.trailtwo <= 4 and self.trailtwo >= 0:
+      display.set_pixel(self.currentx,self.trailtwo,self.mid_high_two)
+    if self.trailone <= 4 and self.trailone >= 0:
+      display.set_pixel(self.currentx,self.trailone, self.mid_high_one)
+    if self.currenty <= 4 and self.currenty >= 0:
+      display.set_pixel(self.currentx,self.currenty, self.high)
   
   def set_all_low(self):
     if self.trailtwo <= 4 and self.trailtwo >= 0:
-      display.set_pixel(self.currentx,self.trailtwo,low)
-    if self.trailtwo < 4 and self.trailtwo >= 0:
-      display.set_pixel(self.currentx,self.trailone,low)
-    if self.currenty < 4 and self.currenty >= 0: 
-      display.set_pixel(self.currentx,self.currenty,low)
+      display.set_pixel(self.currentx,self.trailtwo,self.low)
+    if self.trailone <= 4 and self.trailone >= 0:
+      display.set_pixel(self.currentx,self.trailone,self.low)
+    if self.currenty <= 4 and self.currenty >= 0: 
+      display.set_pixel(self.currentx,self.currenty,self.low)
     
     
   def increase_y_value(self):
@@ -28,16 +37,8 @@ class Drip():
     self.trailone = self.trailone + 1
     self.currenty = self.currenty + 1
     
-  def set_all_high():
-    if self.trailtwo <= 4 and self.trailtwo >= 0:
-      display.set_pixel(self.currentx,self.trailtwo,mid_high_two)
-    if self.trailone < 4 and self.trailone >= 0:
-      display.set_pixel(self.currentx,self.trailone,mid_high_one)
-    if self.currenty < 4 and self.currenty >= 0:
-      display.set_pixel(self.currentx,self.currety,high)
     
-    
-  def move_the_drip():
+  def move_the_drip(self):
     self.set_all_low()
     self.increase_y_value()
     self.set_all_high()
@@ -47,10 +48,7 @@ while True:
   while myobject:
     if myobject.currenty > 7:
       del myobject
+      break
     else:
       myobject.move_the_drip()
-      sleep(200)
-    
-  
-    
-
+      sleep(100)
