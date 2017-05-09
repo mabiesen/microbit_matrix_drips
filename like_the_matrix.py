@@ -27,16 +27,12 @@ class Drip():
     self.trailtwo = self.trailtwo + 1
     self.trailone = self.trailone + 1
     self.currenty = self.currenty + 1
-  
-  def light_trail_two(self):
+    
+  def set_all_high():
     if self.trailtwo <= 4 and self.trailtwo >= 0:
       display.set_pixel(self.currentx,self.trailtwo,mid_high_two)
-
-  def light_trail_one(self):
     if self.trailone < 4 and self.trailone >= 0:
       display.set_pixel(self.currentx,self.trailone,mid_high_one)
-
-  def light_current(self):
     if self.currenty < 4 and self.currenty >= 0:
       display.set_pixel(self.currentx,self.currety,high)
     
