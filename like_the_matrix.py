@@ -10,8 +10,8 @@ class Drip():
   def __init__(self):
     self.currentx = random.choice(0,4)
     self.currenty = 0
-    self.trailone = currenty - 1
-    self.trailtwo = currenty - 2
+    self.trailone = -1
+    self.trailtwo = -2
     self.set_all_high()
   
   def set_all_low(self):
