@@ -57,7 +57,7 @@ while True:
       del myobject
     else:
       myobject.move_the_drip()
-    sleep(200)
+      sleep(200)
     
   
     
